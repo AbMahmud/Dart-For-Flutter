@@ -1,0 +1,38 @@
+// OBJECTIVES
+// 1. Inheritance with Default & Parameterised Constructor 
+// 2. Inheritance with Named Constructor
+
+/**
+ * Simply Sub class Object(dog) calls it's Super class constructor first then,
+ * It calls own constructor 
+ */
+
+void main () {
+
+  // dog OBJECT Creating....
+  var dog = new Dog('Deshi', 'Black');
+}
+
+// Super class 
+class Animal { 
+  String color;
+
+  // Constructor method
+  Animal ( String _color) {
+    print('Constructor method of Animal Class');
+    print('I like ${_color} Animals');
+  }
+}
+
+// Sub class
+class Dog extends Animal {
+  String breed;
+
+  // Constructor method
+  Dog (String _breed, String _color) : super(_color) {  // Implicit call to the super class constructor method. [with parameter]
+    this.breed = _breed;
+    this.color = _color;
+    print('Constructor method of Dog Class');
+    print('The color is ${this.color} And The Breed is ${this.breed}');
+  }
+}

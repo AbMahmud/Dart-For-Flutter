@@ -1,0 +1,36 @@
+// OBJECTIVES...
+// 1. Default Getter and Setter
+// 2. Custom Getter and Setter
+// 3. Private instance variable  
+
+void main () {
+
+  // 1. Default Getter and Setter
+  var mahmud = new UserAccount();    // Here mahmud is a referance variable..
+  mahmud._mulTK = 1000.0;      // Calling default setter to set value.
+  print(mahmud._mulTK);          // Calling default getter to get value.
+
+  // 2. Custom Getter and Setter
+  mahmud.setting_lavSohoTK = 10.0; // Calling Custom setter to set value.
+  print(mahmud.getting_lavSohoTK);       // Calling Custom Getter to get value.
+}
+
+class UserAccount {
+   
+   double lavErSotangsho;   // Instance variable 
+   double _mulTK;                  // Private Instance variable to it's own library
+   double lavSohoTK;              // Instance variable 
+
+  // Creating Custom Setter function.. (Can not be any types without void)
+  void set setting_lavSohoTK (double lav) {
+    lavErSotangsho = lav;
+    this.lavSohoTK = _mulTK+(_mulTK*(lavErSotangsho / 100));
+  }
+
+  // Creating Custom Getter function..
+  double get getting_lavSohoTK {
+      return lavSohoTK;
+  
+    // double get getting_lavSohoTK => lavSohoTK;    [ Short Form (Optimization) ]
+  }
+}

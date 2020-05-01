@@ -1,0 +1,19 @@
+void main () {
+  
+  //  final variables 
+  final String myName = 'Mahmud'; 
+  final nyCity = 'Khulna';
+  
+  // const variable
+  const double PI = 3.14;
+  const myAge = '26';
+}
+
+class newClass {
+  
+  final  myEducation = 'M.Sc Engineer'; 
+  // final String myEducation = 'M.Sc Engineer'; 
+  
+  static const  myUniversity = 'KUET';
+  // static const String myUniversity = 'KUET';
+}

@@ -1,0 +1,29 @@
+// OBJECTIVES
+// INTERFACE (implements Keyword)
+
+void main () {
+  // Object creation of implementing class
+  var telivision = new Telivision();
+  telivision.voliumUp();
+  telivision.voliumDown();
+  telivision.favoriteChannel();
+}
+
+// Super-Class
+class Remote {
+  void voliumUp () => print('______Volium Up from Remote______');
+  void voliumDown () => print('______Volium Down from Remote______');
+}
+
+// Another Super-Class
+class ChannelList {
+  void favoriteChannel () => print('Star Sports is my Favorite channel');
+}
+
+// Sub-Class (implementing class)
+class Telivision implements Remote, ChannelList {
+  // we can not use [super.methidName()] implementation in interface.
+  void voliumUp () => print('______Volium Up from Telivision______');
+  void voliumDown () => print('______Volium Down from Telivision______');
+  void favoriteChannel () => print('BTV is my Favorite channel');
+}

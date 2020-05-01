@@ -1,0 +1,30 @@
+/**
+ * OBJECTIVES:
+ * 1. Higher-Order Function
+ *    -> How to pass function as parameter?
+ *    -> How to return a function from another function
+ */
+
+void main () {
+
+  Function Addition = (int a, int b) => (a+b);    // Normal Function with FAT Arrow ()=>)
+  print(Addition(5,5));
+
+  myFunction_With_Other_Functions ('Higher-Order Function', Addition );   // Calling of Higher-Order Function  
+
+  var myFun = return_myFunction();  // Calls return_myFunction()    // returns multiplication (int a, int b) = myFun    // myFun(2,5)     // OUTPUT: 10
+  print(myFun(2,5)); 
+
+}
+
+// Example One: Accepts function as parameter
+void myFunction_With_Other_Functions (String message, Function functional_Parameter) {    // Receiving Function as parameter
+  print(message);
+  print(functional_Parameter(10,10));   // Sending parameters to 'Addition' Function
+}
+
+// Example Two: Returns a Function
+Function return_myFunction () {   
+  var multiplication = (int a, int b) => (a*b);
+  return multiplication;
+}

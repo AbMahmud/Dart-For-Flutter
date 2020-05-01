@@ -1,0 +1,44 @@
+// OBJECTIVES
+// 1. Abstract Method
+// 2. Absact Class
+
+void main () {
+  // Obect creating of Sub-class
+  var dog = new Dog();
+  dog.display('Black');
+  print('');
+  dog.normalText();
+
+}
+
+// Super-Class (Abstact Class)
+abstract class Animal {
+  // Instance Variable
+  String color;
+
+  // Abstract Method syntax (Can not have method body)
+  void display (String _color);
+
+  // Normal Method
+  void normalText () {
+    print('Showing a normal text by Normal Method');
+  }
+}
+
+// Sub-Class 
+class Dog extends Animal {
+  // Instance Variable
+  int age;
+
+  // Overriding Abstract Method
+  void display (String _color) {
+    print('We Overrided the abstract Method');
+    print('The color of Dog is- ${_color}');
+  }
+
+  // Optional (Overriding a Normal Method)
+  void normalText () {
+    print('Showing a normal text from Sub-Class');
+  }
+
+}

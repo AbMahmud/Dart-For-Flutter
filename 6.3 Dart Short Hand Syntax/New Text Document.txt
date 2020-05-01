@@ -1,0 +1,21 @@
+void main () {
+  
+  myFunction();
+  myFunction2();
+  
+  int result = jogfol(5,10);
+  print('The sum is $result'); 
+}
+
+// Creating a Function. Must be outside the main () function..
+
+void myFunction () {
+  print('Text from myFunction');
+}
+
+myFunction2 () => print('From myFunction-2' );
+
+
+int jogfol (int a, int b) => (a+b);
+
+  

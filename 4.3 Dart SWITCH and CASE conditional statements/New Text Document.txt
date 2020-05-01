@@ -1,0 +1,38 @@
+void main () {
+  
+  // Switch Case statements : works with only 'int' & 'String'
+  // 'bool' & 'double' don't works 
+  
+  
+  String Grade = '234234234';
+    
+  switch(Grade) {
+      
+    case 'A+':
+      print('you got 80 marks above on average');
+      break;
+      
+    case 'A':
+      print('you got 70 marks above on average');
+      break;
+      
+    case 'B':
+      print('you got 60 marks above on average');
+      break;
+      
+    case 'C':
+      print('you got 50 marks above on average');
+      break;
+      
+    case 'D':
+      print('you got 40 marks above on average');
+      break;
+      
+    case 'F':
+      print('You have Failed');
+      break;
+      
+    default : 
+      print('Invalid input..');
+  }
+}

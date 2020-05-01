@@ -1,0 +1,33 @@
+void main() {
+  // For first Object...
+  var student_1 = new Student();  // Object one, student_1 is a referance variable.
+  student_1.setInfo(01, 'Ab.Mahmud', 'ICT');
+  student_1.showInfo();
+
+  print('');
+
+  // For second Object...
+  var student_2 = new Student();  // Object Two, student_2 is a referance variable.
+  student_2.setInfo(02, 'Sk. Al Mamun', 'ICT');
+  student_2.showInfo();
+}
+
+class Student {
+  // instance variables..
+  int id;
+  String name;
+  String department;
+
+  //Functions inside of this class...
+  void setInfo(int st_id, String st_name, String dept) {
+    this.id = st_id;
+    this.name = st_name;
+    this.department = dept;
+  }
+
+  void showInfo () {
+    print('Student name is ${this.name}');
+    print('Student id is #${this.id}');
+    print('Student Department is ${this.department}');
+  }
+}

@@ -1,0 +1,51 @@
+// OBJECTIVES....  
+// 1. Exploring inheritance
+
+void main() {
+
+  // Creating OBJ of SUB class
+
+  var dog = new Dog();
+  dog.color = 'Black';
+  dog.breed = 'Deshi';
+  dog.gheW();
+  dog.eat();
+
+  var cat = new Cat();
+  cat.color = 'Black';
+  cat.age = 3;
+  cat.mew();
+  cat.eat();
+
+}
+
+// SUPER or BASE or PARENT class
+class Animal {
+  
+    String color;
+
+    void eat() {
+    print('Animal Food');
+  }
+}
+
+// SUB or CHILD class
+class Dog extends Animal {
+
+  String breed;
+
+  void gheW () {
+    print('DOG: GHEW');
+  }
+}
+
+// SUB or CHILD class
+class Cat extends Animal {
+
+  String color;
+  int age;
+
+  void mew () {
+    print('CAT: MEW');
+  }
+}

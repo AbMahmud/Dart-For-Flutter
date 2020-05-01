@@ -1,0 +1,26 @@
+void main () {
+  // Numbers: int:
+  int balance = 1000000000;
+  var age = 10;
+  
+  int hexValue = 0XADEF10;
+  
+  // Numbers: double:
+  double interest = 5.5;
+  var shud = 3.3;
+  double exponents = 1.42e5;
+  
+  // Strings:
+  String name = "Mahmud";
+  var company = "Webnexusbd.com";
+  
+  // Boolean
+  bool isActive = true;
+  var isValid = false;
+  
+  // Now let's print all these values...
+  
+  print( hexValue);
+  print(exponents);
+  print(isActive);
+}

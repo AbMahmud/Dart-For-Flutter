@@ -1,0 +1,58 @@
+/**
+ * OBJECTIVES:
+ * 1. Growable List 
+ *  
+ * NOTE:- In Dart, ARRAY is known as LIST    
+ */
+
+void main () {
+
+  //  int arr = [1,2,3,4,5];      // This doesn't work here in DART language
+
+  //var numbersList = List(5);   // Way -1 
+
+  // Elements:      20    30    45    50    60
+  // Index:         0     1     2     3     4
+
+  // WAY - 2
+  List<String> countries = ['BD', 'USA', 'CHINA'];
+               countries.add('JAPAN');
+               countries.add('BHUTAN');
+
+  // WAY - 2
+  List<int> numbersList = List();	// Growable List
+
+  numbersList.add(10);    // Removed by remove()
+  numbersList.add(20);
+  numbersList.add(30);
+  numbersList.add(40);
+  numbersList.add(50);
+
+  numbersList[0] = null;	// Delete Operation
+  numbersList[3] = 45;		// Update Operation
+
+  // Using of some predifined Helping Methods
+  numbersList.remove(null);
+  numbersList.add(60);
+  numbersList.removeAt(3);
+  numbersList.clear();
+
+
+
+  // Way - 1     // Using individual element
+  for (int element in numbersList) {
+    print(element);
+  }
+  print('\n');
+
+ // Way - 2     // Using Lambda
+  numbersList.forEach((element) => print(element));     // Here forEach is a Helping function.
+  print('\n');
+
+  // Way - 3    // Using Index
+  for (int i=0; i < numbersList.length; i++) {
+    print(numbersList[i]);
+  }
+
+}
+// Some predefined methods don't support fixed-length-list   

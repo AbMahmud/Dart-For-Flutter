@@ -1,0 +1,18 @@
+//  Optional Named Parameters.
+void main () {
+
+ area(2, height:3);
+ area(2, width:4, height:3 );
+  
+}
+
+//  Optional Named Parameters.
+int area (int length,  {int height, int width = 20} ) {
+  
+  print('length is $length');
+  print('height is $height');
+  print('width is $width');
+  
+  print(length*height*width);
+}  
+  

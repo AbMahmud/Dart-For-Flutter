@@ -1,0 +1,42 @@
+/**
+ * OBJECTIVES:
+ * 1. Closure
+ */
+
+void main () {
+  // Definition 1:
+  // A Closure is a function that has access to the parent scope, even after the scope has closed.
+
+  String message = 'Corona Virus';
+
+  Function showMessahe = () {   // A Special kind of Function what can mutate (modify) the variables of parent Scope
+    message = 'COVID-19';   // Hre Modifing variable of parent Scope
+    print(message);
+  };
+
+  showMessahe();
+
+
+  // Definition 2:
+  // A Closure is a function object that has access to variables in its lexical scope,
+  // Even when the function is used outside of its original scope.
+
+
+  Function osType = () {  // Lambda Function
+    String os = 'Android';
+
+    Function update = () {   // Here 'say' is a Function type variable, not a function 
+      os = 'Apple';
+      print(os);
+    };
+    return update;   // so shout not return as 'say()' where as 'say' is just a variable
+  };
+
+  // osType();      // Note: Direct calling didn't show any Output
+  //osType().update();      // Also illegal 
+
+  Function speak = osType();
+  speak();      // osType()     // update()    // os = 'Apple' &  print(os)     // OUTPUT: Apple
+
+
+}

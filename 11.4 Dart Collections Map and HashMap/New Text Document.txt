@@ -1,0 +1,49 @@
+/**
+ * OBJECTIVES:
+ * 1. Maps
+ * --> KEY has to be unique
+ * --> VALUE can be duplicate
+ */
+
+void main () {
+
+  Map<String, int> phoneCode = {    //  Method - 2 Using Literal..
+    'BD' : 880,
+    'USA' : 1,
+    'INDIA': 9
+  };    // In the List we used '[]' But In MAP we must use '{}'...
+
+
+
+  Map<String, String> fruits = Map();   // Method - 1 Using Constructor..
+  fruits['Apple'] = 'Green';      // Insertion Operation.
+  fruits['Banana'] = 'Yellow';
+  fruits['Lichi'] = 'Red';
+
+  // Some Predefined Helping Methods for MAP..
+  fruits.update('Lichi', (value) => 'Green');   // Update the value for the given KEY.
+  fruits.containsKey('Apple');    // Returns true if the KEY is peresent in MAP
+  fruits.containsValue('Green');  // Returns true if the VALUE is peresent in MAP
+  var val = fruits.remove('Banana');  // Remove KEY and it's VALUE and returns the VALUE.
+  print(val);
+
+  fruits.isEmpty;             // Returns True is the Map is empty
+  fruits.length;              // Returns the total number of elements in MAP
+  //fruits.clear();
+
+  for (var key in fruits.keys ) {   // Print All KEYS
+    print(key);
+  }
+  print('');
+  for (var value in fruits.values ) {   // Print All VALUES
+    print(value);
+  }
+  print('');
+
+  // Print all keys and values together : Using Lambda..
+  fruits.forEach((String key,String value) => print('The key is- $key And the value is- $value'));
+  print('');
+  phoneCode.forEach((key, value) => print('Country- $key And Phone Code- $value '));
+
+
+}

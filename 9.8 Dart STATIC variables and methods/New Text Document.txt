@@ -1,0 +1,41 @@
+// OBJECTIVES
+// 1. Static Methods And Variables
+
+void main () {
+  //Objet creation.
+  //var circle1 = new Circle(); 
+  Circle.someCalculation();     // Also known as Class Method
+  print(Circle.pi);      // 4 bytes   // Also Known as Class variable // Obj can't call static variables
+
+  //var circle2 = new Circle();
+  Circle.someCalculation();
+  print(Circle.pi);      // 0 bytes
+
+  //var circle3 = new Circle();
+  Circle.someCalculation();
+  // Circle.pi = 5.14;    // Can't assign any value for const variable
+  print(Circle.pi);      // 0 bytes
+  
+  //Circle.normalMethod();    // This wouldn't work | Bcoz, this is not a class Methods or static method. so object is must.
+
+  var circle3 = new Circle();
+  circle3.normalMethod();
+
+}
+
+class Circle {
+  
+  static const double pi = 3.14;    // Instance or Normal variable
+  static int radisu = 5;     // Must be static variable to be accessed by any Static Method | e.g: someCalculation()
+  int number = 10;   
+  
+  static void someCalculation () {     // Instance or Normal method
+    print('Some Calculation goes here');
+    print(radisu);    // You Can't use 'This' Keyword
+    //print(number);    // Normal or instance variables can't be accessed by static or class Method
+  }
+
+  void normalMethod () {
+    print('From Normal Methid- ${Circle.radisu}');    // As it is class variable or static variable
+  }
+}

@@ -1,0 +1,25 @@
+void main () {
+  
+  int a = 5;
+  int b = 10;
+  
+  int maxNumber;
+  
+  if (a > b) {
+    maxNumber = a;
+  } else {
+    maxNumber = b;
+  }
+  print('The large number is $maxNumber');
+  
+  // Condition ? Exp1 : Exp2
+  maxNumber = a > b ?  a :  b;
+  print('The large number is $maxNumber');
+  
+  // Exp1 ?? Exp2 ----- if exp1 is not-null then returns it's value. if null returns the value of exp2 
+  
+  var myUniversity = null;
+  
+  var uvName =  myUniversity ?? "KUET, Khulna";
+  print(uvName);
+}

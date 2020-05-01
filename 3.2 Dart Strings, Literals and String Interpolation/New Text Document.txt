@@ -1,0 +1,36 @@
+void main () {
+  
+  // Strings
+  
+  String s1 = 'it\'s Dart';
+  print(s1);
+  
+  String s2 = "it's Dart";
+  print(s2);
+  
+  // String Interpolation
+  
+  String myName = 'Mahmud';
+  String Message1 = 'The instructor name is ' + myName;   // Not a good practice in Dart Language.
+  String Message2 = 'The instructor name is $myName';
+  
+  String bigText = 'This is the example of a big string with plus sigh' +
+                    'but in the next example we would see another string' +
+                    'withour plus sigh';
+  
+    String bigText2 = 'This is the example of a big string without plus sigh' 
+                    'And this is good practice in Dart Language';
+  
+  print(Message1);
+  print(Message2);
+  print(bigText);
+  print(bigText2);
+  
+  print('The total character in bigText is ${bigText.length}');
+  
+  int a = 5;
+  int b = 10;
+  
+ print( 'The sum of $a and $b is ${a+b}');
+
+}

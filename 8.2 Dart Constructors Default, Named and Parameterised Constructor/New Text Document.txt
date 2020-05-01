@@ -1,0 +1,49 @@
+// Objectives...
+// 1. Default Constructor 
+// 2. Parameterized Constructor 
+// 3. Named Constructor 
+// 4. Constant Constructor (Obsolete)
+
+void main () {
+
+  // Calling Default Constructor
+  //var student1 = new Students();
+
+  // Calling Parameterized Constructor
+  var student2 = new Students(1, 'Mahmud', 'ICT');
+  print('The id is #${student2.id} \nAnd the name is ${student2.name} \nAnd the dept is ${student2.dept} ');
+
+// Calling Named Constructor
+var student3 = new Students.myCustomConstructor();
+
+var student4 = new Students.anotherNamedConstructor(2, 'Sk. Mamun', 'ICT');
+print('The id is #${student4.id} \nAnd the name is ${student4.name} \nAnd the dept is ${student4.dept} ');
+
+}
+
+class Students {
+
+  int id;
+  String name;
+  String dept;
+
+  // 1. Default Constructor 
+  // Students () {
+  //   print('This is default constructor');
+  // }
+
+  // 2. Parameterized Constructor 
+  Students ( int _id, String _name, String _dept) {
+     this.id = _id;
+     this.name = _name;
+     this.dept = _dept;
+  }
+
+  // 3. Named Constructor 
+  Students.myCustomConstructor () {
+    print('This is Named Constructor');
+  }
+
+  Students.anotherNamedConstructor (this.id, this.name, this.dept);
+
+}

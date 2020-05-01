@@ -1,0 +1,26 @@
+/**
+ * OBJECTIVES:
+ * 1. Callable class
+ * --> Class treated as Function.
+ * --> Implement call() mrthod
+ */
+
+void main () {
+
+  var personOne = new Person();
+  personOne();  // Calling the Class like a function.
+  personOne.myFan();
+
+}
+
+class Person {
+    
+    call() {    // Now this class 'Person' is a Callable Function
+        print('Callable Class');
+    }
+    
+    void myFan () {
+      print('My Normal Method');
+    }
+
+}

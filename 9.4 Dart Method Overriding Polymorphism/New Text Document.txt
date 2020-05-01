@@ -1,0 +1,32 @@
+// OBJECTIVE 
+// Exploring Method Overriding 
+
+void main () {
+  // Creating Object
+  var dog = new Dog();
+  dog.eat();
+  print(dog.color);
+}
+
+// Super Class
+class Animal {
+  String color = 'brown';
+
+  void eat () {
+    print('Animal Food');
+  }
+}
+
+// Sub Class
+class Dog extends Animal {
+  int age;
+  String color = 'Black';
+
+  void sound () {
+    print('GHEW!');
+  } 
+    void eat () {
+      super.eat();  // Method overriding... (U can write it anywhere in the in eat method)
+    print('Dog Food');
+  }
+}

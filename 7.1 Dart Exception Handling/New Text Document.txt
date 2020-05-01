@@ -1,0 +1,24 @@
+// OBJECTIVES...
+// 1. on Clause
+// 2. catch clause with Exception object
+// 3. catch clause with Exception object and Stack Trace object
+// 4. finally clause
+
+
+void main () {
+  
+  print ('CASE - 1');
+  // CASE -1 : When you know the Exception to be thrown, use on Clause.
+  
+  try {
+    int result = 12 ~/ 0;
+    print('The result is $result');
+  } catch(e, s) {   // Somehow, only 'on' Clause is not working in online setup (dartpad)
+    print('Can not devided by Zero $e');
+    print('STACK TRACE $s');
+  } finally {
+    print('No matter, whether exception is occured or not. finally clause must be executed');
+  }
+  
+}
+

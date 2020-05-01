@@ -1,0 +1,31 @@
+void main () {
+  
+  // IF Condition
+  var age = 26;
+  if (age >= 18 && age <= 30) {
+    print('You have the preferred age');
+  }
+  
+  // IF ELSE IF Ladder statement
+  var marks = 81;
+  
+  
+  if (marks >= 90 && marks <=100) {
+    print('A+ Grade');
+  } else if (marks >= 80 && marks < 90){
+    print('A Grade');
+  } else if (marks >= 70 && marks < 80) {
+    print('A- Grade');
+  } else if (marks >= 60 && marks < 70) {
+    print('B Grade');
+  } else if (marks >= 50 && marks < 60) {
+    print('C Grade');
+  } else if (marks >= 40 && marks < 50) {
+    print('D Grade');
+  } else if (marks >= 0 && marks < 40) {
+    print('You Have Failed');
+  } else {
+    print('Invalid Marks. Plz try again');
+  }
+ 
+}

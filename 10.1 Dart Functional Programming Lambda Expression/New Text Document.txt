@@ -1,0 +1,29 @@
+// OBJECTIVES
+// 1. Lambda Function
+
+/**
+ * A nameless function is known as Lambda Function.
+ * it's also known as Anonymous Function or Just Lambda.
+ * NOTE:- A Function in dart is an object
+ */
+
+void main () {
+  print('From Normal Function- ${Addition(5,10)}');   // Calling of a Normal Function
+
+  // 1. Lambda Function
+  Function SumofTwo = (int a, int b) {   
+    return print('From Lambda Function- ${a+b}');
+  };
+
+  // Short hand - Using FAT Arrow
+  Function SumofTwo2 = (int a, int b) => print('From Short Hand Lambda Function- ${a+b}');
+  
+
+  // Calling of Lambda Function
+  SumofTwo(10,10);
+  SumofTwo2(1,1);
+}
+
+int Addition (int a, int b) {   // Normal Function 
+  return (a+b);
+}

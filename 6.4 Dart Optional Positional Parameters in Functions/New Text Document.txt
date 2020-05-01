@@ -1,0 +1,24 @@
+// 1. Required Parameters
+// 2. Optional Positional Parameters.
+void main () {
+  fevFood('Chicken', 'Chinese', 'Sweets');
+  print('');
+  fevGame('Cricket');
+}
+
+// 1.Required Parameters 
+void fevFood (String food1, String food2, String food3) {
+  print('Food 1 is: $food1');
+  print('Food 2 is: $food2');
+  print('Food 3 is: $food3');
+}
+
+
+// 2. Optional Positional Parameters.
+void fevGame (String game1, [String game2, String game3]) {
+  print('Game 1 is: $game1');
+  print('Game 2 is: $game2');
+  print('Game 3 is: $game3');
+}
+
+  

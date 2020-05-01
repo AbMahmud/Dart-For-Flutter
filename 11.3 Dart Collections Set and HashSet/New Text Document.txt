@@ -1,0 +1,48 @@
+/**
+ * OBJECTIVES:
+ * 1. Set And HashSet (Unordered Collection)
+ *  
+ * NOTE:- As set is an unordered collection So there are no indexing.
+ */
+
+void main () {
+
+
+  // WAY - 2
+  List<String> countries = ['BD', 'USA', 'CHINA'];
+               countries.add('JAPAN');
+               countries.add('BHUTAN');
+
+  // WAY - 1
+  Set<int> numbersList = Set();	// Growable List
+
+  numbersList.add(10);    // Removed by remove()
+  numbersList.add(20);
+  numbersList.add(30);
+  numbersList.add(40);
+  numbersList.add(50);
+
+  // Using of some predifined Helping Methods
+  numbersList.remove(10);   // Remove the item what contains value 10.
+  numbersList.add(60);      // Add a new item to the set 
+  bool TorF = numbersList.isEmpty;  // Returns True is the set is empty.
+  print(TorF);
+  int count = numbersList.length;   // Return the total number of list
+  print(count);
+  bool isHave = numbersList.contains(50);   // Returnd true if the element is found in set
+  print(isHave);
+  //numbersList.clear();
+
+
+
+  // Way - 1     // Using individual element
+  for (int element in numbersList) {
+    print(element);
+  }
+  print('\n');
+
+ // Way - 2     // Using Lambda
+  numbersList.forEach((element) => print(element));     // Here forEach is a Helping function.
+  print('\n');
+
+}
